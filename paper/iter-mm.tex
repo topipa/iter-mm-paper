@@ -430,15 +430,18 @@ $\sum_{j = 1}^J S_j = S$.
 The multiple importance sampling estimator is a weighted combination
 of the individual importance sampling estimators:
 \begin{nalign*}
-\hat{\mu}_{\text{MIS}} = \sum_{j = 1}^J \frac{1}{S_j} \sum_{s = 1}^{S_j} \beta_j (\boldsymbol{\theta}^{(s)}) \frac{h (\boldsymbol{\theta}^{(s)}) p(\boldsymbol{\theta}^{(s)})}{g_j (\boldsymbol{\theta}^{(s)})},
+\hat{\mu}_{\text{MIS}} = \sum_{j = 1}^J \frac{1}{S_j} \sum_{s = 1}^{S_j} \beta_j (\boldsymbol{\theta}^{(j, s)}) \frac{h (\boldsymbol{\theta}^{(j, s)}) p(\boldsymbol{\theta}^{(j, s)})}{g_j (\boldsymbol{\theta}^{(j, s)})},
 \end{nalign*}
 where the weighting functions $\{ \beta_j \}_{j = 1}^J$ must satisfy
 $\sum_{j = 1}^J \beta_j (\boldsymbol{\theta}) = 1$ for all $\boldsymbol{\theta}$.
 With different ways of choosing the weighting functions, one can
 vary between locally emphasizing one of the proposal distribution $g_j$, or
 considering them in a balanced way for every value of $\boldsymbol{\theta}$.
-Here, we choose the weighting functions using a balance heuristic, $\beta_j (\boldsymbol{\theta}) \propto S_j g_j (\boldsymbol{\theta})$, whose
-variance is proven to be
+Here, we choose the weighting functions using a balance heuristic
+\begin{nalign*}
+\beta_j (\boldsymbol{\theta}) = \frac{S_j g_j (\boldsymbol{\theta})}{\sum_{k = 1}^{J} S_k g_k (\boldsymbol{\theta})} ,
+\end{nalign*}
+whose variance is proven to be
 smaller than the variance of any weighting scheme plus a term that goes to zero as
 the smallest $S_j \rightarrow \infty$~\citep{veach1995optimally}.
 The balance heuristic is also a quite natural way of combining the draws from different

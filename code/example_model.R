@@ -1,8 +1,8 @@
 library(rstan)
 library(brms)
-source("rstan_code/mm_loo_funs.R")
-source("rstan_code/stanfit_funs.R")
-source("rstan_code/brmsfit_funs.R")
+source("code/mm_loo_funs.R")
+source("code/stanfit_funs.R")
+source("code/brmsfit_funs.R")
 rstan_options(auto_write = TRUE)
 options(mc.cores = 1)
 

@@ -2,17 +2,19 @@
 
 
 
-@article{gelfand1996model,
-  title={Model determination using sampling-based methods},
-  author={Gelfand, Alan E},
-  journal={Markov chain Monte Carlo in practice},
-  pages={145--162},
-  year={1996},
-  publisher={Chapman and Hall, London}
+@incollection{gelfand1996model,
+ author	     = {Alan E. Gelfand},
+ title	     = {Model determination using sampling-based methods},
+ booktitle   = {Markov Chain Monte Carlo in Practice},
+ editor	     = {W. R. Gilks and S. Richardson and D. J.
+                Spiegelhalter},
+ publisher   = {Chapman \& Hall},
+ year	     = {1996},
+ pages	     = {145--162}
 }
 
 @article{vehtari2017practical,
-  title={Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC},
+  title={Practical {Bayesian} model evaluation using leave-one-out cross-validation and WAIC},
   author={Vehtari, Aki and Gelman, Andrew and Gabry, Jonah},
   journal={Statistics and Computing},
   volume={27},
@@ -24,9 +26,9 @@
 
 @article{vehtari2015pareto,
   title={Pareto smoothed importance sampling},
-  author={Vehtari, Aki and Gelman, Andrew and Gabry, Jonah},
+  author={Vehtari, Aki and Simpson, Daniel and Gelman, Andrew and Yao, Yuling and Gabry, Jonah},
   journal={arXiv preprint arXiv:1507.02646},
-  year={2017}
+  year={2019}
 }
 
 
@@ -44,17 +46,17 @@
 }
 
 
-@article{stan,
+@misc{stan,
   title={{The Stan C++ Library, version 2.17.3}},
   author={{Stan Development Team}},
-  journal={http://mc-stan.org/},
+  url={http://mc-stan.org/},
   year={2018}
 }
 
-@article{rstan,
+@misc{rstan,
   title={{RStan: the R interface to Stan, version 2.17.3}},
   author={{Stan Development Team}},
-  journal={http://mc-stan.org/interfaces/rstan.html},
+  url={http://mc-stan.org/interfaces/rstan.html},
   year={2018}
 }
 
@@ -66,12 +68,17 @@
   year={2018}
 }
 
-@article{gelfand1992model,
-  title={Model determination using predictive distributions with implementation via sampling-based methods},
-  author={Gelfand, Alan E and Dey, Dipak K and Chang, Hong},
-  year={1992},
-  note={In: Bernardo, J. M., Berger, J. O., Dawid, A. P., Smith, A. F. M (eds.) Bayesian Statistics, 4th edn, pp. 147-167},
-  publisher={Oxford University Press, Oxford}
+@inproceedings{gelfand1992model,
+ author	     = {Alan E. Gelfand and D. K. Dey and H. Chang},
+ title	     = {Model Determination using Predictive Distributions
+                with Implementation via Sampling-Based Methods
+                (with discussion)},
+ booktitle   = {Bayesian Statistics 4},
+ pages	     = {147--167},
+ year	     = {1992},
+ editor	     = {J. M. Bernardo and J. O. Berger and A. P. Dawid and
+                A. F. M. Smith},
+ publisher   = {Oxford University Press}
 }
 
 @article{Vehtari+etal:2019:Rhat,
@@ -114,7 +121,7 @@
 }
 
 @article{peruggia1997variability,
-  title={On the variability of case-deletion Importance sampling Weights in the Bayesian linear model},
+  title={On the variability of case-deletion Importance sampling Weights in the {Bayesian} linear model},
   author={Peruggia, Mario},
   journal={Journal of the American Statistical Association},
   volume={92},
@@ -200,7 +207,7 @@
 }
 
 @article{kong1994sequential,
-  title={Sequential imputations and Bayesian missing data problems},
+  title={Sequential imputations and {Bayesian} missing data problems},
   author={Kong, Augustine and Liu, Jun S and Wong, Wing Hung},
   journal={Journal of the American statistical association},
   volume={89},
@@ -218,7 +225,7 @@
 }
 
 @article{kahn1953methods,
-  title={Methods of reducing sample size in Monte Carlo computations},
+  title={Methods of reducing sample size in {Monte} {Carlo} computations},
   author={Kahn, Herman and Marshall, Andy W},
   journal={Journal of the Operations Research Society of America},
   volume={1},
@@ -237,7 +244,7 @@
 }
 
 @article{geweke1989bayesian,
-  title={Bayesian inference in econometric models using Monte Carlo integration},
+  title={Bayesian inference in econometric models using {Monte} {Carlo} integration},
   author={Geweke, John},
   journal={Econometrica: Journal of the Econometric Society},
   pages={1317--1339},
@@ -248,7 +255,7 @@
 @article{tierney1994markov,
   title={Markov chains for exploring posterior distributions},
   author={Tierney, Luke},
-  journal={the Annals of Statistics},
+  journal={The Annals of Statistics},
   pages={1701--1728},
   year={1994},
   publisher={JSTOR}
@@ -291,7 +298,7 @@
 }
 
 @inproceedings{veach1995optimally,
-  title={Optimally combining sampling techniques for Monte Carlo rendering},
+  title={Optimally combining sampling techniques for {Monte} {Carlo} rendering},
   author={Veach, Eric and Guibas, Leonidas J},
   booktitle={Proceedings of the 22nd annual conference on Computer graphics and interactive techniques},
   pages={419--428},
@@ -302,7 +309,7 @@
 @article{pickands1975statistical,
   title={Statistical inference using extreme order statistics},
   author={Pickands, James},
-  journal={the Annals of Statistics},
+  journal={The Annals of Statistics},
   volume={3},
   number={1},
   pages={119--131},
@@ -337,16 +344,21 @@
   publisher={Chapman and Hall/CRC}
 }
 
-@Manual{loo,
-  title = {loo: Efficient Leave-One-Out Cross-Validation and WAIC for Bayesian Models},
-  author = {Vehtari, Aki and Gelman, Andrew and Gabry, Jonah and Yao, Yuling},
-  year = {2019},
-  note = {R package version 2.1.0},
-  url = {https://CRAN.R-project.org/package=loo}
-}
+@Misc{loo,
+    title = {loo: Efficient leave-one-out cross-validation and {WAIC} for
+      {Bayesian} models},
+    author = {Aki Vehtari and Jonah Gabry and Mans Magnusson and Yuling
+      Yao and Andrew Gelman},
+    year = {2019},
+    note = {R package version 2.2.0},
+    url = {https://mc-stan.org/loo},
+  }
+
+
+
 
 @article{hoffman2014no,
-  title={The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo.},
+  title={The {No-U-Turn} sampler: adaptively setting path lengths in {Hamiltonian} {Monte} {Carlo}},
   author={Hoffman, Matthew D and Gelman, Andrew},
   journal={Journal of Machine Learning Research},
   volume={15},
@@ -390,7 +402,7 @@ year = "2017"
 }
 
 @article{ando2010predictive,
-  title={Predictive likelihood for Bayesian model selection and averaging},
+  title={Predictive likelihood for {Bayesian} model selection and averaging},
   author={Ando, Tomohiro and Tsay, Ruey},
   journal={International Journal of Forecasting},
   volume={26},
@@ -400,7 +412,7 @@ year = "2017"
   publisher={Elsevier}
 }
 
-@article{bernardo1994bayesian,
+@book{bernardo1994bayesian,
   title={Bayesian theory},
   author={Bernardo, Jose M and Smith, Adrian FM},
   year={1994},
@@ -421,7 +433,7 @@ year = "2017"
      author = {{R Core Team}},
      organization = {R Foundation for Statistical Computing},
      address = {Vienna, Austria},
-     year = {2019},
+     year = {2020},
      url = {http://www.R-project.org/},
 }
 
@@ -466,7 +478,7 @@ year = "2017"
 }
 
 @article{cappe2004population,
-  title={Population monte carlo},
+  title={Population {Monte} {Carlo}},
   author={Capp{\'e}, Olivier and Guillin, Arnaud and Marin, Jean-Michel and Robert, Christian P},
   journal={Journal of Computational and Graphical Statistics},
   volume={13},
@@ -488,7 +500,7 @@ year = "2017"
 }
 
 @article{rischard2018unbiased,
-  title={Unbiased estimation of log normalizing constants with applications to Bayesian cross-validation},
+  title={Unbiased estimation of log normalizing constants with applications to {Bayesian} cross-validation},
   author={Rischard, Maxime and Jacob, Pierre E and Pillai, Natesh},
   journal={arXiv preprint arXiv:1810.01382},
   year={2018}
@@ -515,14 +527,14 @@ year = "2017"
 @article{bernardo1979expected,
   title={Expected information as expected utility},
   author={Bernardo, Jos{\'e} M},
-  journal={the Annals of Statistics},
+  journal={The Annals of Statistics},
   pages={686--690},
   year={1979},
   publisher={JSTOR}
 }
 
 @article{krueger2016probabilistic,
-  title={Probabilistic forecasting and comparative model assessment based on Markov chain Monte Carlo output},
+  title={Probabilistic forecasting and comparative model assessment based on {Markov} chain {Monte} {Carlo} output},
   author={Krueger, Fabian and Lerch, Sebastian and Thorarinsdottir, Thordis L and Gneiting, Tilmann},
   journal={arXiv preprint arXiv:1608.06802},
   year={2019}
@@ -553,10 +565,291 @@ year = "2017"
 @Article{Piironen2017,
 author="Piironen, Juho
 and Vehtari, Aki",
-title="Comparison of Bayesian predictive methods for model selection",
+title="Comparison of {Bayesian} predictive methods for model selection",
 journal="Statistics and Computing",
 year="2017",
 volume="27",
 number="3",
 pages="711--735"
 }
+
+@book{mcbook,
+   author = {Art B. Owen},
+   year = 2013,
+   title = {Monte Carlo theory, methods and examples}
+}
+
+@book{rubino2009rare,
+  title={Rare event simulation using {Monte} {Carlo} methods},
+  author={Rubino, Gerardo and Tuffin, Bruno},
+  year={2009},
+  publisher={John Wiley \& Sons}
+}
+
+@article{hesterberg1995weighted,
+  title={Weighted average importance sampling and defensive mixture distributions},
+  author={Hesterberg, Tim},
+  journal={Technometrics},
+  volume={37},
+  number={2},
+  pages={185--194},
+  year={1995},
+  publisher={Taylor \& Francis Group}
+}
+
+@article{owen2000safe,
+  title={Safe and effective importance sampling},
+  author={Owen, Art and Zhou, Yi},
+  journal={Journal of the American Statistical Association},
+  volume={95},
+  number={449},
+  pages={135--143},
+  year={2000},
+  publisher={Taylor \& Francis Group}
+}
+
+@article{elvira2019generalized,
+  title={Generalized multiple importance sampling},
+  author={Elvira, V{\'\i}ctor and Martino, Luca and Luengo, David and Bugallo, M{\'o}nica F and others},
+  journal={Statistical Science},
+  volume={34},
+  number={1},
+  pages={129--155},
+  year={2019},
+  publisher={Institute of Mathematical Statistics}
+}
+
+@article{meng2002warp,
+  title={Warp bridge sampling},
+  author={Meng, Xiao-Li and Schilling, Stephen},
+  journal={Journal of Computational and Graphical Statistics},
+  volume={11},
+  number={3},
+  pages={552--586},
+  year={2002},
+  publisher={Taylor \& Francis}
+}
+
+@article{bugallo2017adaptive,
+  title={Adaptive importance sampling: the past, the present, and the future},
+  author={Bugallo, Monica F and Elvira, Victor and Martino, Luca and Luengo, David and Miguez, Joaquin and Djuric, Petar M},
+  journal={IEEE Signal Processing Magazine},
+  volume={34},
+  number={4},
+  pages={60--79},
+  year={2017},
+  publisher={IEEE}
+}
+
+@article{martino2015adaptive,
+  title={An adaptive population importance sampler: Learning from uncertainty},
+  author={Martino, Luca and Elvira, Victor and Luengo, David and Corander, Jukka},
+  journal={IEEE Transactions on Signal Processing},
+  volume={63},
+  number={16},
+  pages={4422--4437},
+  year={2015},
+  publisher={IEEE}
+}
+
+@inproceedings{giordano2019swiss,
+  title={A Swiss Army Infinitesimal Jackknife},
+  author={Giordano, Ryan and Stephenson, William and Liu, Runjing and Jordan, Michael and Broderick, Tamara},
+  booktitle={The 22nd International Conference on Artificial Intelligence and Statistics},
+  pages={1139--1147},
+  year={2019}
+}
+
+@article{sbert2016variance,
+  title={Variance Analysis of Multi-sample and One-sample Multiple Importance Sampling},
+  author={Sbert, Mateu and Havran, Vlastimil and Szirmay-Kalos, L{\'a}szl{\'o}},
+  journal={Computer Graphics Forum},
+  volume={35},
+  number={7},
+  pages={451--460},
+  year={2016}
+}
+
+@article{sbert2019generalizing,
+  title={Generalizing the Balance Heuristic Estimator in Multiple Importance Sampling},
+  author={Sbert, Mateu and Elvira, V{\'\i}ctor},
+  journal={arXiv preprint arXiv:1903.11908},
+  year={2019}
+}
+
+@article{elvira2016heretical,
+  title={Heretical multiple importance sampling},
+  author={Elvira, V{\'\i}ctor and Martino, Luca and Luengo, David and Bugallo, M{\'o}nica F},
+  journal={IEEE Signal Processing Letters},
+  volume={23},
+  number={10},
+  pages={1474--1478},
+  year={2016},
+  publisher={IEEE}
+}
+
+@article{elvira2015efficient,
+  title={Efficient multiple importance sampling estimators},
+  author={Elvira, V{\'\i}ctor and Martino, Luca and Luengo, David and Bugallo, M{\'o}nica F},
+  journal={IEEE Signal Processing Letters},
+  volume={22},
+  number={10},
+  pages={1757--1761},
+  year={2015},
+  publisher={IEEE}
+}
+
+@article{sbert2017adaptive,
+  title={Adaptive multiple importance sampling for general functions},
+  author={Sbert, Mateu and Havran, Vlastimil},
+  journal={The Visual Computer},
+  volume={33},
+  number={6-8},
+  pages={845--855},
+  year={2017},
+  publisher={Springer}
+}
+
+@inproceedings{havran2014optimal,
+  title={Optimal combination of techniques in multiple importance sampling},
+  author={Havran, Vlastimil and Sbert, Mateu},
+  booktitle={Proceedings of the 13th ACM SIGGRAPH International Conference on Virtual-Reality Continuum and its Applications in Industry},
+  pages={141--150},
+  year={2014}
+}
+
+@article{chatterjee2018sample,
+  title={The sample size required in importance sampling},
+  author={Chatterjee, Sourav and Diaconis, Persi and others},
+  journal={The Annals of Applied Probability},
+  volume={28},
+  number={2},
+  pages={1099--1135},
+  year={2018},
+  publisher={Institute of Mathematical Statistics}
+}
+
+@article{martino2017effective,
+  title={Effective sample size for importance sampling based on discrepancy measures},
+  author={Martino, Luca and Elvira, V{\'\i}ctor and Louzada, Francisco},
+  journal={Signal Processing},
+  volume={131},
+  pages={386--401},
+  year={2017},
+  publisher={Elsevier}
+}
+
+@article{kappen2016adaptive,
+  title={Adaptive importance sampling for control and inference},
+  author={Kappen, Hilbert Johan and Ruiz, Hans Christian},
+  journal={Journal of Statistical Physics},
+  volume={162},
+  number={5},
+  pages={1244--1266},
+  year={2016},
+  publisher={Springer}
+}
+
+@article{bugallo2015adaptive,
+  title={Adaptive importance sampling in signal processing},
+  author={Bugallo, M{\'o}nica F and Martino, Luca and Corander, Jukka},
+  journal={Digital Signal Processing},
+  volume={47},
+  pages={36--49},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@article{akyildiz2019convergence,
+  title={Convergence rates for optimised adaptive importance samplers},
+  author={Akyildiz, {\"O}mer Deniz and M{\'\i}guez, Joaqu{\'\i}n},
+  journal={arXiv preprint arXiv:1903.12044},
+  year={2019}
+}
+
+@inproceedings{feng2018uniform,
+  title={Uniform convergence of sample average approximation with adaptive multiple importance sampling},
+  author={Feng, M Ben and Maggiar, Alvaro and Staum, Jeremy and W{\"a}chter, Andreas},
+  booktitle={2018 Winter Simulation Conference (WSC)},
+  pages={1646--1657},
+  year={2018},
+  organization={IEEE}
+}
+
+@article{koblents2015population,
+  title={A population {Monte} {Carlo} scheme with transformed weights and its application to stochastic kinetic models},
+  author={Koblents, Eugenia and M{\'\i}guez, Joaqu{\'\i}n},
+  journal={Statistics and Computing},
+  volume={25},
+  number={2},
+  pages={407--425},
+  year={2015},
+  publisher={Springer}
+}
+
+@article{miguez2018analysis,
+  title={Analysis of a nonlinear importance sampling scheme for {Bayesian} parameter estimation in state-space models},
+  author={Miguez, Joaquin and Mari{\~n}o, In{\'e}s P and V{\'a}zquez, Manuel A},
+  journal={Signal Processing},
+  volume={142},
+  pages={281--291},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{elvira2018rethinking,
+  title={Rethinking the effective sample size},
+  author={Elvira, V{\'\i}ctor and Martino, Luca and Robert, Christian P},
+  journal={arXiv preprint arXiv:1809.04129},
+  year={2018}
+}
+
+@article{zhang1996nonparametric,
+  title={Nonparametric importance sampling},
+  author={Zhang, Ping},
+  journal={Journal of the American Statistical Association},
+  volume={91},
+  number={435},
+  pages={1245--1253},
+  year={1996},
+  publisher={Taylor \& Francis}
+}
+
+@article{cappe2008adaptive,
+  title={Adaptive importance sampling in general mixture classes},
+  author={Capp{\'e}, Olivier and Douc, Randal and Guillin, Arnaud and Marin, Jean-Michel and Robert, Christian P},
+  journal={Statistics and Computing},
+  volume={18},
+  number={4},
+  pages={447--459},
+  year={2008},
+  publisher={Springer}
+}
+
+@article{elvira2017improving,
+  title={Improving population {Monte} {Carlo}: Alternative weighting and resampling schemes},
+  author={Elvira, V{\'\i}ctor and Martino, Luca and Luengo, David and Bugallo, M{\'o}nica F},
+  journal={Signal Processing},
+  volume={131},
+  pages={77--91},
+  year={2017},
+  publisher={Elsevier}
+}
+
+@book{robert2013monte,
+  title={Monte Carlo statistical methods},
+  author={Robert, Christian and Casella, George},
+  year={2013},
+  publisher={Springer Science \& Business Media}
+}
+
+@article{roberts2004general,
+  title={General state space {Markov} chains and {MCMC} algorithms},
+  author={Roberts, Gareth O and Rosenthal, Jeffrey S and others},
+  journal={Probability surveys},
+  volume={1},
+  pages={20--71},
+  year={2004},
+  publisher={The Institute of Mathematical Statistics and the Bernoulli Society}
+}
+

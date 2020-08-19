@@ -10,7 +10,8 @@
 #' represents the original posterior distribution. A weight zero represents omitting
 #' a certain observation.
 #' @param expectation_fun A function whose expectation is being computed.
-#' The function takes arguments `x` and `upars`.
+#' The function takes arguments `x` and `upars`. Must return a matrix with
+#' rows equal to the number of draws.
 #' @param log_lik_fun A function that takes `x` and returns a matrix of log-likelihood draws
 #'  based on the model `x`. The rows indicate draws and columns indicate observations.
 #' @param post_draws_fun A function that takes `x` as the first argument and returns

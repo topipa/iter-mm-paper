@@ -72,7 +72,6 @@ IW <- function(x, obs_weights, expectation_fun, log_lik_fun, post_draws_fun, unc
 
 
 
-# restart_transform ignored if split is FALSE
 #' @param x A fitted model object.
 #' @param obs_weights A vector with length equal to number of observations in
 #' the model x. The weights represent the target density for importance sampling.
@@ -100,7 +99,7 @@ IW <- function(x, obs_weights, expectation_fun, log_lik_fun, post_draws_fun, unc
 #' at the end of moment matching. FALSE by default.
 #' @param restart_transform Logical; When split is TRUE, indicates whether to
 #' start the second transformation from the original model parameters
-#' or the transformed parameters.
+#' or the transformed parameters. If split is FALSE, this is ignored.
 #' @param ... Further arguments passed to the custom functions documented above.
 #'
 #' @return Returns a list with 3 elements: the expectation of interest,

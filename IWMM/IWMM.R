@@ -52,12 +52,14 @@ IW <- function(x, obs_weights, expectation_fun, log_lik_fun, post_draws_fun, unc
   else {
     if (log_expectation_fun) {
       expectation <- exp(matrixStats::colLogSumExps(lw + expectation_fun(x, upars, ...)))
+      lwf <- lw + expectation_fun(x, upars, ...)
     }
     else {
       w <- exp(lw)
       expectation <- colSums(w * expectation_fun(x, upars, ...))
+      lwf <- lw + log(abs(expectation_fun(x, upars, ...)))
     }
-    lwf_psis <- suppressWarnings(loo::psis(expectation))
+    lwf_psis <- suppressWarnings(loo::psis(lwf))
     kf <- lwf_psis$diagnostics$pareto_k
 
 

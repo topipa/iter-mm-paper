@@ -141,22 +141,24 @@ IWMM2 <- function(upars, lw_psis, expectation_fun,
       next
     }
 
-    # 3. match means and covariances
-    trans <- shift_and_cov(upars, lw)
-    quantities <- update_quantities(
-      upars = trans$upars,
-      orig_log_prob_prop = orig_log_prob_prop,
-      log_prob_target_upars_fun = log_prob_target_upars_fun,
-      ...
-    )
-    if (quantities$k < k) {
-      upars <- trans$upars
-      total_shift <- total_shift + trans$shift
-      total_mapping <- trans$mapping %*% total_mapping
+    if (cov_transform) {
+      # 3. match means and covariances
+      trans <- shift_and_cov(upars, lw)
+      quantities <- update_quantities(
+        upars = trans$upars,
+        orig_log_prob_prop = orig_log_prob_prop,
+        log_prob_target_upars_fun = log_prob_target_upars_fun,
+        ...
+      )
+      if (quantities$k < k) {
+        upars <- trans$upars
+        total_shift <- total_shift + trans$shift
+        total_mapping <- trans$mapping %*% total_mapping
 
-      lw <- quantities$lw
-      k <- quantities$k
-      next
+        lw <- quantities$lw
+        k <- quantities$k
+        next
+      }
     }
 
 
@@ -243,25 +245,29 @@ IWMM2 <- function(upars, lw_psis, expectation_fun,
         next
       }
 
-      # 3. match means and covariances
-      trans <- shift_and_cov(upars2, lwf)
-      quantities <- update_quantities2(
-        upars2 = trans$upars,
-        orig_log_prob_prop = orig_log_prob_prop,
-        log_prob_target_upars_fun = log_prob_target_upars_fun,
-        expectation_fun = expectation_fun,
-        log_expectation_fun = log_expectation_fun,
-        ...
-      )
-      if (quantities$kf < kf) {
-        upars2 <- trans$upars
-        total_shift2 <- total_shift2 + trans$shift
-        total_mapping2 <- trans$mapping %*% total_mapping2
+      if (cov_transform) {
+        # 3. match means and covariances
+        trans <- shift_and_cov(upars2, lwf)
+        quantities <- update_quantities2(
+          upars2 = trans$upars,
+          orig_log_prob_prop = orig_log_prob_prop,
+          log_prob_target_upars_fun = log_prob_target_upars_fun,
+          expectation_fun = expectation_fun,
+          log_expectation_fun = log_expectation_fun,
+          ...
+        )
+        if (quantities$kf < kf) {
+          upars2 <- trans$upars
+          total_shift2 <- total_shift2 + trans$shift
+          total_mapping2 <- trans$mapping %*% total_mapping2
 
-        lwf <- quantities$lwf
-        kf <- quantities$kf
-        next
+          lwf <- quantities$lwf
+          kf <- quantities$kf
+          next
+        }
       }
+
+
 
       break
     }

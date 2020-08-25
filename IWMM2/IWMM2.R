@@ -86,7 +86,7 @@ IW2 <- function(upars, expectation_fun, log_prob_prop_upars_fun,
 #' and 2 pareto k diagnostic values.
 IWMM2 <- function(upars, lw_psis, expectation_fun,
                   log_prob_prop_upars_fun, log_prob_target_upars_fun,
-                  log_expectation_fun, k_threshold = 0.5, cov_transform = FALSE, split = FALSE, restart_transform = FALSE, ...) {
+                  log_expectation_fun, k_threshold = 0.5, cov_transform = TRUE, split = FALSE, restart_transform = FALSE, ...) {
   upars_orig <- upars
   orig_log_prob_prop <- log_prob_prop_upars_fun(upars = upars, ...)
 

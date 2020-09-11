@@ -405,6 +405,20 @@ IWMM <- function(x, obs_weights, upars, lw_psis, expectation_fun, log_prob_upars
 }
 
 
+# wrapper around IW
+IW_stanfit <- function(x, obs_weights, expectation_fun, moment_match = FALSE, log_expectation_fun = FALSE, ...) {
+  IW(x = x, obs_weights = obs_weights,
+     expectation_fun = expectation_fun,
+     log_lik_fun = log_lik_stanfit,
+     post_draws_fun = post_draws_stanfit,
+     unconstrain_pars_fun = unconstrain_pars_stanfit,
+     log_prob_upars_fun = log_prob_upars_stanfit,
+     log_lik_upars_fun = log_lik_upars_stanfit,
+     moment_match = moment_match,
+     log_expectation_fun = log_expectation_fun,
+     ...)
+}
+
 
 
 

@@ -5,6 +5,4 @@ This is a repository for the paper *Implicitly Adaptive Importance Sampling* by 
 
 ## References
 
-Paananen, T., Piironen, J., Bürkner, P.-C., and Vehtari, A. (2020). Implicitly Adaptive Importance Sampling. ([arXiv Preprint](https://arxiv.org/abs/1906.08850))
-
-
+Paananen, T., Piironen, J., Bürkner, PC. *et al*. Implicitly Adaptive Importance Sampling. *Stat Comput* **31,** 16 (2021) ([Paper](https://doi.org/10.1007/s11222-020-09982-2))
